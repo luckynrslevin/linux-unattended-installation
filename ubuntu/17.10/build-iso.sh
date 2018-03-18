@@ -46,7 +46,7 @@ cat "./initrd" | gzip -9c > "$TMP_DISC_DIR/initrd.gz"
 # build iso
 cd "$TMP_DISC_DIR"
 rm -r '[BOOT]'
-genisoimage -r -V "ubuntu 17.10 netboot unattended" -cache-inodes -J -l -b isolinux.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -input-charset utf-8 -o "$TARGET_ISO" ./
+genisoimage -r -V "ubuntu 17.10 netboot unattended" -cache-inodes -J -l -b isolinux.bin -c boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -input-charset utf-8 -o "$HOME/$TARGET_ISO" ./
 
 # go back to initial directory
 cd "$CURRENT_DIR"
